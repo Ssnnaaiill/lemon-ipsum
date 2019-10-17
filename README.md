@@ -2,7 +2,7 @@
 > [reference](https://velopert.com/2597)
 
 ## 준비
-ajax 요청을 위해 `axios` 라이브러리를 설치합니다. 또한, jQuery 대신 Sementic UI를 사용하기 위해 `sementic-ui-react`, `sementic-ui-css`와 같은 라이브러리도 yarn을 통해 설치합니다.
+ajax 요청을 위해 `axios` 라이브러리를 설치합니다. 또한, jQuery 대신 Sementic UI를 사용하기 위해 `semantic-ui-react`, `semantic-ui-css`와 같은 라이브러리도 yarn을 통해 설치합니다.
 ```
 $ yarn add axios
 $ yarn add sementic-ui-react sementic-ui-css
