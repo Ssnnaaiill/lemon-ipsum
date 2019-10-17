@@ -5,7 +5,7 @@ import './Navigator.css';
 const Navigator = () => (
   <div className="Navigator">
     <Button
-      color="teal"
+      color="violet"
       content="Previous"
       icon="left arrow"
       labelPosition="left"
@@ -13,7 +13,7 @@ const Navigator = () => (
     <div className="Navigator-page-num">1</div>
     <Button
       className="Navigator-right-button"
-      color="teal"
+      color="violet"
       content="Next"
       icon="right arrow"
       labelPosition="right"
