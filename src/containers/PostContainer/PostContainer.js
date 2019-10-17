@@ -45,27 +45,54 @@ class PostContainer extends Component {
       fetching: true
     });
 
-    // await: wait for promise
-    // this will be changed into generator code through babel plugin
-    const info = await Promise.all([
-      service.getPost(postId),
-      service.getComments(postId)
-    ]);
+    try {
+      // await: wait for promise
+      // this will be changed into generator code through babel plugin
+      const info = await Promise.all([
+        service.getPost(postId),
+        service.getComments(postId)
+      ]);
 
-    // object destructuring syntax
-    // takes out required values and create references to then
-    const { title, body } = info[0].data;
-    const comments = info[1].data;
+      // object destructuring syntax
+      // takes out required values and create references to then
+      const { title, body } = info[0].data;
+      const comments = info[1].data;
 
-    this.setState({
-      postId,
-      post: {
-        title,
-        body
-      },
-      comments,
-      fetching: false
-    });
+      this.setState({
+        postId,
+        post: {
+          title,
+          body
+        },
+        comments,
+        fetching: false
+      });
+    } catch(e) {
+      // if err, stop at this point
+      this.setState({
+        fetching: false
+      });
+      console.log('error occured', e);
+      alert('You are looking at the first post!');
+    }
+  }
+
+
+  /**
+   * handleNavigateClick
+   * - get data of previous or next post
+   * @param type: NEXT or PREVious
+   */
+  
+   handleNavigateClick = (type) => {
+    const postId = this.state.postId;
+
+    // check if type is NEXT or PREV
+    if (type === 'NEXT') {
+      this.fetchPostInfo(postId + 1);
+    } else {
+      this.fetchPostInfo(postId - 1);
+    }
   }
 
   componentDidMount() {
@@ -81,6 +108,7 @@ class PostContainer extends Component {
         <Navigator
           postId={postId}
           disabled={fetching}
+          onClick={this.handleNavigateClick}
         />
         <Post
           title={post.title}
