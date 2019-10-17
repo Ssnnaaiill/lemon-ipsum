@@ -5,7 +5,10 @@
   font-style: normal;
 }
 
-body {
+* {
   font-family: 'Eoe_Zno_M';
+}
+
+body {
   background: #E0E0E0;
 }
