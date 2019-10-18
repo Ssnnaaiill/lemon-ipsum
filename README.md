@@ -2,7 +2,8 @@
 > [reference](https://velopert.com/2597)
 
 ## 결과
-[`🍋Lemon Ipsum🍋`](`lemon-ipsum.surge.sh`)
+[`🍋Lemon Ipsum🍋`](`https://lemon-ipsum.surge.sh`)
+
 [surge.sh](https://surge.sh/) 서비스를 사용해서 무료 도메인에 deploy해주었습니다.
 
 ## 준비 과정
