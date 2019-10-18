@@ -1,10 +1,11 @@
 # million-blog
 > [reference](https://velopert.com/2597)
 
-## [deploy 링크](lemon-ipsum.surge.sh)
+## 결과
+[`🍋Lemon Ipsum🍋`](`lemon-ipsum.surge.sh`)
 [surge.sh](https://surge.sh/) 서비스를 사용해서 무료 도메인에 deploy해주었습니다.
 
-## 준비
+## 준비 과정
 ajax 요청을 위해 `axios` 라이브러리를 설치합니다. 또한, jQuery 대신 Sementic UI를 사용하기 위해 `semantic-ui-react`, `semantic-ui-css`와 같은 라이브러리도 yarn을 통해 설치합니다.
 ```
 $ yarn add axios
