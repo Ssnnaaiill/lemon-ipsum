@@ -5,6 +5,7 @@ import Post from './Post/Post';
 import CommentList from './CommentList/CommentList';
 import Comment from './Comment/Comment';
 import Warning from './Warning/Warning';
+import Footer from './Footer/Footer';
 
 export {
   Header,
@@ -13,5 +14,6 @@ export {
   Post,
   CommentList,
   Comment,
-  Warning
+  Warning,
+  Footer
 };

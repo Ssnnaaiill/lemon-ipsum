@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header } from './components';
+import { Header, Footer } from './components';
 import { PostContainer } from './containers';
 
 class App extends Component {
@@ -8,6 +8,7 @@ class App extends Component {
       <div>
         <Header />
         <PostContainer />
+        <Footer />
       </div>
     );
   }

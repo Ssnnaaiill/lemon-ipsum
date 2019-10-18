@@ -1,11 +1,24 @@
 # million-blog
 > [reference](https://velopert.com/2597)
 
+## [deploy 링크](lemon-ipsum.surge.sh)
+[surge.sh](https://surge.sh/) 서비스를 사용해서 무료 도메인에 deploy해주었습니다.
+
 ## 준비
 ajax 요청을 위해 `axios` 라이브러리를 설치합니다. 또한, jQuery 대신 Sementic UI를 사용하기 위해 `semantic-ui-react`, `semantic-ui-css`와 같은 라이브러리도 yarn을 통해 설치합니다.
 ```
 $ yarn add axios
 $ yarn add sementic-ui-react sementic-ui-css
+```
+
+promise 기능을 지원하지 않는 IE8 이하의 구형 브라우저에서도 자바스크립트 엔진을 호환시켜주기 위해 `polyfill`을 적용합니다.
+```
+$ yarn add promise-polyfill
+```
+
+fontawesome에서 제공하는 아이콘들을 사용할 수 있도록 관련 패키지들을 설치합니다.
+```
+$ yarn @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons
 ```
 
 [JSONPlaceHolder](https://jsonplaceholder.typicode.com/)에서 이미 만들어진 *가짜* API 중에서 `post`와 `comment`를 사용하도록 하겠습니다.
